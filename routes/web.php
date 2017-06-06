@@ -14,3 +14,10 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+// Routing with uri and closure
+Route::get('stedding', function () {
+     return view ('stedding', [
+     'name' => 'Stedding'
+     ]);
+});

@@ -13,9 +13,6 @@ set('repository', 'git@github.com:jasperf/larastudio.git');
 set('default_stage', 'production');
 set('git_tty', true); // [Optional] Allocate tty for git on first deployment
 set('ssh_type', 'native');
-add('shared_files', []);
-add('shared_dirs', []);
-add('writable_dirs', []);
 
 
 // Hosts
@@ -25,4 +22,10 @@ host('larastud.io')
     ->forwardAgent()
     ->stage('production')
     ->set('deploy_path', '/var/www/larastud.io');
-    
+
+/**
+ * Upload .env.production file as .env
+ */
+task('upload:env', function () {
+    upload('.env.production', '{{deploy_path}}/shared/.env');
+})->desc('Environment setup');

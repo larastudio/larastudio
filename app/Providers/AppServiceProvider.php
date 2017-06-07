@@ -13,8 +13,6 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //if (!\App::environment('local')) {}
-        //https://laravel.com/docs/5.4/configuration#determining-the-current-environment
         \URL::forceScheme('https');
     }
 

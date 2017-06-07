@@ -29,7 +29,7 @@
     </div>
     <div class="navbar navbar-inverse bg-inverse">
       <div class="container d-flex justify-content-between">
-        <a href="#" class="navbar-brand">Album</a>
+        <a href="#" class="navbar-brand">Stedding</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarHeader" aria-controls="navbarHeader" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
         </button>
@@ -38,10 +38,10 @@
 
     <section class="jumbotron text-center">
       <div class="container">
-        <h1 class="jumbotron-heading">Album example</h1>
+        <h1 class="jumbotron-heading">Stedding</h1>
         <p class="lead text-muted">Stedding is a minimalistic LEMP Stack setup for Laravel PHP. It provisions your VPS with all the tools necessary to run your Laravel PHP application with ease.</p>
         <p>
-          <a href="#" class="btn btn-primary">Main call to action</a>
+          <a href="https://github.com/jasperf/stedding" class="btn btn-primary">Github Repo</a>
           <a href="#" class="btn btn-secondary">Secondary action</a>
         </p>
       </div>

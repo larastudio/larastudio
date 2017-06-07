@@ -17,7 +17,5 @@ Route::get('/', function () {
 
 // Routing with uri and closure
 Route::get('stedding', function () {
-     return view ('stedding', [
-     'name' => 'Stedding'
-     ]);
+     return view ('stedding');
 });

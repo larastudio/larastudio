@@ -99,7 +99,7 @@
         <p class="float-right">
           <a href="#">Back to top</a>
         </p>
-        <p>Stedding is &copy; Stedding</p>
+        <p>Stedding is &copy; Larastudio</p>
       </div>
     </footer>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.4.0/js/tether.min.js" integrity="sha384-DztdAPBWPRXSA/3eYEEUWrWCy7G5KFbe8fFjk5JAIxUYHKkDx6Qin1DkWx51bBrb" crossorigin="anonymous"></script>

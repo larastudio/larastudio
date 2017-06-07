@@ -13,6 +13,8 @@ set('repository', 'git@github.com:jasperf/larastudio.git');
 set('default_stage', 'production');
 set('git_tty', true); // [Optional] Allocate tty for git on first deployment
 set('ssh_type', 'native');
+set('writable_mode', 'chmod');
+set('writable_chmod_mode', '0775');
 
 // Hosts
 

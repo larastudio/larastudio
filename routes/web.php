@@ -15,7 +15,10 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-// Routing with uri and closure
 Route::get('stedding', function () {
      return view ('stedding');
+});
+
+Route::get('contact', function () {
+     return view ('contact');
 });

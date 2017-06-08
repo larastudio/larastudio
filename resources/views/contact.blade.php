@@ -67,6 +67,7 @@
         </style>
     </head>
     <body>
+        
         <div class="flex-center position-ref full-height">
             @if (Route::has('login'))
                 <div class="top-right links">
@@ -100,5 +101,13 @@
                 </form>
             </div>
         </div>
+        <footer class="text-muted">
+          <div class="container">
+            <p class="float-right">
+              <a href="#">Back to top</a>
+            </p>
+            <p>&copy; Larastudio</p>
+          </div>
+    </footer>
     </body>
 </html>

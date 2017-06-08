@@ -87,7 +87,7 @@
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://imagewize.com/category/laravel/">Blog</a>
-                    <a href="https://imagewize.com">Imagewize</a>
+                    <a href="https://larastud.io/stedding">Contact</a>
                 </div>
             </div>
         </div>

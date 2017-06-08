@@ -83,11 +83,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="https://larastud.io/stedding">Stedding</a>
+                    <a href="/stedding">Stedding</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
                     <a href="https://imagewize.com/category/laravel/">Blog</a>
-                    <a href="https://larastud.io/contact">Contact</a>
+                    <a href="/contact">Contact</a>
                 </div>
             </div>
         </div>

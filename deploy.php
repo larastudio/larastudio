@@ -2,6 +2,7 @@
 namespace Deployer;
 
 require 'recipe/laravel.php';
+// require 'vendor/deployer/recipes/cachetool.php';
 
 // Configuration
 
@@ -39,4 +40,29 @@ task('upload:env', function () {
 //   run('sudo find . -type f -exec chmod 664 {} \;');
 //   run('sudo find . -type d -exec chmod 775 {} \;');
 // Clear OPCache
-after('upload:env', 'cachetool:clear:opcache');
+
+/**
+ * Main task
+ */
+desc('Deploy your project');
+task('deploy', [
+    'deploy:prepare',
+    'deploy:lock',
+    'deploy:release',
+    'deploy:update_code',
+    'deploy:shared',
+    'deploy:vendors',
+    'deploy:writable',
+    'upload:env',    
+    'artisan:storage:link',
+    'artisan:view:clear',
+    'artisan:cache:clear',
+    'artisan:config:cache',
+    'artisan:optimize',
+    'deploy:symlink',
+    'deploy:unlock',
+    'cleanup',
+]);
+
+
+// after('upload:env', 'cachetool:clear:opcache');

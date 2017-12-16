@@ -2,7 +2,7 @@
 namespace Deployer;
 
 require 'recipe/laravel.php';
-// require 'vendor/deployer/recipes/cachetool.php';
+require 'vendor/deployer/recipes/cachetool.php';
 
 // Configuration
 
@@ -65,4 +65,4 @@ task('deploy', [
 ]);
 
 
-// after('upload:env', 'cachetool:clear:opcache');
+after('upload:env', 'cachetool:clear:opcache');

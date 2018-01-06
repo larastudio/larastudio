@@ -35,3 +35,6 @@ Route::post('/posts/{post}/comments', 'CommentsController@store'); // working
 //  GET /posts/{id}/edit to edit you go to slug or id /edit
 //  PATCH /posts/{id} to update post based on edit
 //  DELETE /posts{id}
+Auth::routes();
+
+Route::get('/dashboard', 'HomeController@index')->name('dashboard');

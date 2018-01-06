@@ -37,4 +37,4 @@ Route::post('/posts/{post}/comments', 'CommentsController@store'); // working
 //  DELETE /posts{id}
 Auth::routes();
 
-Route::get('/dashboard', 'HomeController@index')->name('dashboard');
+Route::get('/dashboard', 'DashboardController@index')->name('dashboard');

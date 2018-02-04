@@ -24,7 +24,7 @@ Route::get('contact', function () {
 });
 
 Route::get('blog', 'PostsController@index'); // working
-Route::get('/posts/create', 'PostsController@create'); // working
+Route::get('/posts/create', 'PostsController@create')->middleware('auth');; // working
 Route::post('/posts', 'PostsController@store'); // working
 Route::get('/posts/{post}', 'PostsController@show'); // working
 Route::post('/posts/{post}/comments', 'CommentsController@store'); // working

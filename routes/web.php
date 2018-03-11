@@ -19,12 +19,12 @@ Route::get('stedding', function () {
      return view ('stedding');
 });
 
-Route::get('contact', function () {
-     return view ('contact');
-});
+
+Route::get('contact', 'ContactController@index'); // working
+Route::post('contact', 'ContactController@mailToAdmin');
 
 Route::get('blog', 'PostsController@index'); // working
-Route::get('/posts/create', 'PostsController@create')->middleware('auth');; // working
+Route::get('/posts/create', 'PostsController@create')->middleware('auth'); // working
 Route::post('/posts', 'PostsController@store'); // working
 Route::get('/posts/{post}', 'PostsController@show'); // working
 Route::post('/posts/{post}/comments', 'CommentsController@store'); // working

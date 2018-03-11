@@ -86,7 +86,7 @@
                     <a href="/stedding">Stedding</a>
                     <a href="https://laracasts.com">Laracasts</a>
                     <a href="https://laravel-news.com">News</a>
-                    <a href="/blog">Blog</a>
+                    <a href="{{ url('/blog') }}">Blog</a>
                     <a href="/contact">Contact</a>
                 </div>
             </div>

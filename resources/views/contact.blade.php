@@ -85,19 +85,21 @@
                     Contact
                 </div>
 
-                <form>
+                <form action="/contact" method="POST">
+                {{ csrf_field() }}
                     <div class="form-group">
-                        <label for="exampleInputName">Name</label>
-                        <input type="name" class="form-control" id="exampleInputName" placeholder="Name">
+                        <label for="name">Name</label>
+                        <input type="name" class="form-control" id="name" name="name" placeholder="Name">
                     </div>
                     <div class="form-group">
-                        <label for="exampleInputEmail1">Email Address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email Address">
+                        <label for="email">Email Address</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Email Address">
                     </div>
                     <div class="form-group">
-                        <textarea class="form-control" rows="6" placeholder="Comment"></textarea>
+                        <textarea class="form-control" rows="6" placeholder="Comment" name="message" id="message"></textarea>
                     </div>
-                  <button type="submit" class="btn btn-default">Submit</button>
+                  <button type="submit" class="btn btn-default" value"send">Send</button>
+                  @include ('layouts.errors')
                 </form>
             </div>
         </div>

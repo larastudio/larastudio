@@ -23,4 +23,8 @@ class Post extends Model
         // reference to the current object, it's most commonly used in object oriented code
         $this->comments()->create(compact('body'));
     }
+    public function user()
+{
+    return $this->belongsTo(User::class);
+}
 }

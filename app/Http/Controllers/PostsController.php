@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Post;
+//use App\User;
 
 use Illuminate\Http\Request;
 
@@ -35,23 +36,24 @@ class PostsController extends Controller
     }
     public function store()
     {
-            $this->validate(request(), [
-            'title' => 'required',
-            'body' =>   'required'
-            ]);
+        $this->validate(request(), [
+        'title' => 'required',
+        'body' =>   'required'
+        ]);
         
-        // $post = new Post; // Post extension of Eloquent Model
-        // $post->title = request('title');
-        // $post->body = request('body');
-        // //save to the database
-        // $post->save(); // active records saving with Eloquent
+        $post = new Post(); // Post extension of Eloquent Model
+        $post->title = request('title');
+        $post->body = request('body');
+        //save to the database
+        $post->save(); // active records saving with Eloquent
 
         // Post::create([
         //     'title' => request('title'),
         //     'body' => request('body')
         //     ]);
         
-        Post::create(request(['title', 'body']));
+        // shorter still
+        // Post::create(request(['title', 'body']));
         
         //redirect to the homepage
         return redirect('blog');
@@ -60,4 +62,9 @@ class PostsController extends Controller
         // save it to the database
         // redirect to the homepage ore elswhere
     }
+
+    // public function author()
+    // {
+    //     return $this->hasOne('App\User');
+    // }
 }

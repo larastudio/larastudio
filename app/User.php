@@ -26,4 +26,11 @@ class User extends Authenticatable
     protected $hidden = [
         'password', 'remember_token',
     ];
+
+    // connect user to posts
+    
+    public function posts()
+    {
+        return $this->hasMany(Post::class);
+    }
 }

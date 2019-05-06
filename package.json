@@ -14,11 +14,10 @@
     "bootstrap-sass": "^3.4.1",
     "cross-env": "^5.2.0",
     "jquery": "^3.4.1",
+    "laravel-mix": "^4.0.15",
     "lodash": "^4.17.11",
     "vue": "^2.6.10",
     "vue-template-compiler": "^2.6.10"
   },
-  "dependencies": {
-    "laravel-mix": "^4.0.15"
-  }
+  "dependencies": {}
 }

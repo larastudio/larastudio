@@ -34,6 +34,12 @@ class PostsController extends Controller
     {
         return view('posts.create');
     }
+
+    public function edit()
+    {
+        return view('posts.edit');
+    }
+    
     public function store()
     {
         $this->validate(request(), [

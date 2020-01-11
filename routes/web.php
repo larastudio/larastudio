@@ -14,3 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/blog', 'PostController@index')->name('index');
+Route::get('/blog/post/create', 'PostController@create')->name('post.create');
+Route::post('/blog/post/create', 'PostController@store')->name('post.store');
+Route::get('/blog/{slug}', 'PostController@show')->name('post.show');
+Route::get('blog/post/{id}/edit', 'PostController@edit')->name('post.edit');
+Route::post('blog/post/{id}/edit', 'PostController@update')->name('post.update');
+
+
+

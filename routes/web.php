@@ -44,6 +44,33 @@ Route::post('blog/post/{id}/edit', 'PostController@update')->name('post.update')
 |
 */
 
-Auth::routes();
+Route::middleware([ 'auth', 'verified' ])->group(function () {
+    Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+});
 
-Route::get('/dashboard', 'DashboardController@index')->name('dashboard');
+/*
+|--------------------------------------------------------------------------
+| Verification Routes Activation
+|--------------------------------------------------------------------------
+|
+| Verification routes to work with email verification.
+| https://github.com/laravel/framework/blob/6.x/src/Illuminate/Routing/Router.php#L1205
+|
+*/
+
+Auth::routes(['verify' => true]);
+
+/*  
+| -------------------------------------------------------------------------
+| Custom verification Routes as Option
+| -------------------------------------------------------------------------
+|
+| This will add custom routes like email / verify and email/resend to our application.
+| https://stackoverflow.com/a/52576695
+|
+*/
+
+// Auth::routes();
+// Route::get('email/verify', 'Auth\VerificationController@show')->name('verification.notice');
+// Route::get('email/verify/{id}', 'Auth\VerificationController@verify')->name('verification.verify');
+// Route::get('email/resend', 'Auth\VerificationController@resend')->name('verification.resend');

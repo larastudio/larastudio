@@ -20,10 +20,10 @@
                                 <jet-nav-link :href="route('dashboard')" :active="route().current('dashboard')">
                                     Dashboard
                                 </jet-nav-link>
-                                <jet-nav-link :href="route('articles')" :active="route().current('articles.show')">
+                                <jet-nav-link :href="route('articles')" :active="route().current('articles')">
                                     Articles
                                 </jet-nav-link>
-                                <jet-nav-link :href="route('create-articles')" :active="route().current('articles.create')">
+                                <jet-nav-link :href="route('create-articles')" :active="route().current('create-articles')">
                                     Add Article
                                 </jet-nav-link>
                             </div>

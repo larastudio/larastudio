@@ -31,3 +31,7 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
 Route::middleware(['auth:sanctum', 'verified'])->get('articles/show', function () {
     return Inertia::render('Articles/Show');
 })->name('articles');
+
+Route::middleware(['auth:sanctum', 'verified'])->get('articles/create', function () {
+    return Inertia::render('Articles/CreateArticle');
+})->name('create-articles');

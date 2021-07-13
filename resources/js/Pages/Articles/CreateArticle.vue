@@ -9,8 +9,22 @@
         <div class="py-12">
             <div class="max-w-7xl mx-auto sm:px-6 lg:px-8">
                 <div class="bg-white overflow-hidden shadow-xl sm:rounded-lg">
-                   <jet-form-section @submitted="createArticle">
-                    </jet-form-section>
+                   <editor
+                    
+                    :init="{
+                        height: 500,
+                        menubar: false,
+                        plugins: [
+                        'advlist autolink lists link image charmap print preview anchor',
+                        'searchreplace visualblocks code fullscreen',
+                        'insertdatetime media table paste code help wordcount'
+                        ],
+                        toolbar:
+                        'undo redo | formatselect | bold italic backcolor | \
+                        alignleft aligncenter alignright alignjustify | \
+                        bullist numlist outdent indent | removeformat | help'
+                    }"
+                    />
                 </div>
             </div>
         </div>
@@ -19,25 +33,14 @@
 
 <script>
     import AppLayout from '@/Layouts/AppLayout'
-    import JetFormSection from '@/Jetstream/FormSection'
+    import Editor from '@tinymce/tinymce-vue'
 
     export default {
         components: {
             AppLayout,
-            JetFormSection,
+            'editor': Editor,
         },
-        methods: {
-            createArticle() {
-                this.createArticleForm.post(route('article.store'), {
-                    preserveScroll: true,
-                    onSuccess: () => {
-                        this.displayingToken = true
-                        this.createApiTokenForm.reset()
-                    }
-                })
-            },
-            
-        },
+        
     }
 
     

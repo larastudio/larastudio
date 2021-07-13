@@ -14,24 +14,7 @@
 </head>
 <body class="bg-gray-200 min-h-screen font-base">
 <div id="app">
-
-
-    <base-nav></base-nav>
-
-    @yield('header')
-
-    <main>
-        <div class="container mx-auto py-6 sm:px-6 lg:px-8">
-            <!-- Replace with your content -->
-            <div class="px-4 py-6 sm:px-0">
-
-                @yield('content')
-            </div>
-            <!-- /End replace -->
-        </div>
-    </main>
-
-
+    @yield('content')
 </div>
 </body>
 </html>

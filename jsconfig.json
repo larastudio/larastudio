@@ -1,0 +1,24 @@
+{
+    "compilerOptions": {
+      "baseUrl": ".",
+      "paths": {
+        "@/*": [
+          "resources/js/*"
+        ],
+        "@jestream/*": [
+          "resources/js/Jetstream/*"
+        ],
+        "@layouts/*": [
+          "resources/js/Layouts/*"
+        ],
+        "@pages/*": [
+          "resources/js/Pages/*"
+        ]
+      }
+    },
+    "exclude": [
+      "node_modules",
+      "public"
+    ]
+  }
+  

@@ -28,10 +28,20 @@ Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
     return Inertia::render('Dashboard');
 })->name('dashboard');
 
-Route::middleware(['auth:sanctum', 'verified'])->get('articles/show', function () {
-    return Inertia::render('Articles/Show');
-})->name('articles');
+Route::middleware('auth:sanctum', 'verified')->group( function () {
+    Route::resource('articles', ArticlesController::class);
+});
 
-Route::middleware(['auth:sanctum', 'verified'])->get('articles/create', function () {
-    return Inertia::render('Articles/CreateArticle');
-})->name('create-articles');
+// Route::middleware(['auth:sanctum', 'verified'])->get('articles/show', function () {
+//     return Inertia::render('Articles/Show');
+// })->name('articles');
+
+// Route::middleware(['auth:sanctum', 'verified'])->get('articles/create', function () {
+//     return Inertia::render('Articles/CreateArticle');
+// })->name('create-articles');
+
+// Route::resource('articles', ArticleController::class);
+
+// Route::middleware('auth:sanctum')->group( function () {
+//     Route::resource('products', ProductController::class);
+// });

@@ -7,7 +7,7 @@ use App\Models\Article;
 use Illuminate\Support\Facades\Request;
 use Inertia\Inertia;
 
-class ArticlesController extends Controller
+class ArticleController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -18,7 +18,7 @@ class ArticlesController extends Controller
     {
         $queries = ['search', 'page'];
 
-        return Inertia::render('Articles/Index', [
+        return Inertia::render('Article/Index', [
             'articles' => Article::when($request->user()->hasRole('user'), function ($query) use ($request) {
                 $query->where('user_id', $request->user()->id);
             })
@@ -36,7 +36,7 @@ class ArticlesController extends Controller
      */
     public function create()
     {
-        return Inertia::render('Articles/Create');
+        return Inertia::render('Article/Create');
     }
 
     /**

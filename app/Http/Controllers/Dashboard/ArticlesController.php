@@ -17,6 +17,7 @@ class ArticlesController extends Controller
     public function index(Request $request)
     {
         $queries = ['search', 'page'];
+
         return Inertia::render('Articles/Index', [
             'articles' => Article::when($request->user()->hasRole('user'), function ($query) use ($request) {
                 $query->where('user_id', $request->user()->id);
@@ -48,14 +49,13 @@ class ArticlesController extends Controller
     {
         $request->validate([
             'title' => 'required|string',
-            'body' => 'required|string'
+            'body' => 'required|string',
         ]);
 
         $request->user()->posts()->create($request->only('title', 'body'));
 
         return redirect()->route('articles.index')->with('success', 'Article has been created');
     }
-
 
     /**
      * Show the form for editing the specified resource.
@@ -79,7 +79,7 @@ class ArticlesController extends Controller
     {
         $request->validate([
             'title' => 'required|string',
-            'content' => 'required|string'
+            'content' => 'required|string',
         ]);
 
         $article->update($request->only('title', 'body'));

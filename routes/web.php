@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\Dashboard\ArticleController;
+use App\Http\Controllers\ArticleShowController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -25,24 +26,22 @@ Route::get('/', function () {
     ]);
 });
 
-Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {
-    return Inertia::render('Dashboard');
-})->name('dashboard');
+Route::middleware(['auth:sanctum', 'verified'])->group(function () {
+    Route::get('/dashboard', function () {
+        return Inertia::render('Dashboard');
+    })->name('dashboard');
 
-Route::middleware('auth:sanctum', 'verified')->group(function () {
-    Route::resource('articles', ArticleController::class);
+    Route::resource('articles', ArticleController::class)->except('show');
 });
 
-// Route::middleware(['auth:sanctum', 'verified'])->get('articles/show', function () {
-//     return Inertia::render('Articles/Show');
+
+// Route::prefix('/admin')->middleware(['auth:sanctum', 'verified'])->get('articles/index', function () {
+//     return Inertia::render('Article/Index');
 // })->name('articles');
 
 // Route::middleware(['auth:sanctum', 'verified'])->get('articles/create', function () {
-//     return Inertia::render('Articles/CreateArticle');
+//     return Inertia::render('Article/Create');
 // })->name('create-articles');
 
-// Route::resource('articles', ArticleController::class);
+// Route::get('/articles/{article}', ArticleShowController::class)->name('articles.show');
 
-// Route::middleware('auth:sanctum')->group( function () {
-//     Route::resource('products', ProductController::class);
-// });

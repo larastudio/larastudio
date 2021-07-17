@@ -47,11 +47,11 @@
                                                 <!-- <div class="block px-4 py-2 text-xs text-gray-400">
                                                     Articles
                                                 </div> -->
-                                                <jet-dropdown-link :href="route('articles')">
+                                                <jet-dropdown-link :href="route('articles.index')">
                                                     Articles Overview
                                                 </jet-dropdown-link>
 
-                                                <jet-dropdown-link :href="route('create-articles')">
+                                                <jet-dropdown-link :href="route('articles.create')">
                                                     Add Article
                                                 </jet-dropdown-link>
                                             </template>

@@ -60,15 +60,15 @@
             JetFormSection,
         },
         methods: {
-            createArticle() {
-                this.createArticleForm.post(route('article.get'), {
-                    preserveScroll: true,
-                    onSuccess: () => {
-                        this.displayingToken = true
-                        this.createApiTokenForm.reset()
-                    }
-                })
-            },
+            // createArticle() {
+            //     this.createArticleForm.post(route('article.get'), {
+            //         preserveScroll: true,
+            //         onSuccess: () => {
+            //             this.displayingToken = true
+            //             this.createApiTokenForm.reset()
+            //         }
+            //     })
+            // },
             
         },
     }

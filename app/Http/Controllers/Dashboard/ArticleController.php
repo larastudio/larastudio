@@ -16,16 +16,8 @@ class ArticleController extends Controller
      */
     public function index(Request $request)
     {
-        $queries = ['search', 'page'];
-
         return Inertia::render('Article/Index', [
-            'articles' => Article::when($request->user()->hasRole('user'), function ($query) use ($request) {
-                $query->where('user_id', $request->user()->id);
-            })
-                ->filter($request->only($queries))
-                ->paginate(2)
-                ->withQueryString(),
-            'filters' => $request->all($queries),
+            "articles" => Article::orderBy('id', 'DESC')->paginate(10)
         ]);
     }
 

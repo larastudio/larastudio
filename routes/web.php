@@ -1,7 +1,7 @@
 <?php
 
-use App\Http\Controllers\Dashboard\ArticleController;
 use App\Http\Controllers\ArticleShowController;
+use App\Http\Controllers\Dashboard\ArticleController;
 use Illuminate\Foundation\Application;
 use Illuminate\Support\Facades\Route;
 use Inertia\Inertia;
@@ -34,7 +34,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
     Route::resource('articles', ArticleController::class)->except('show');
 });
 
-
 // Route::prefix('/admin')->middleware(['auth:sanctum', 'verified'])->get('articles/index', function () {
 //     return Inertia::render('Article/Index');
 // })->name('articles');
@@ -44,4 +43,3 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 // })->name('create-articles');
 
 // Route::get('/articles/{article}', ArticleShowController::class)->name('articles.show');
-

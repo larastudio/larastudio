@@ -17,6 +17,7 @@ class ArticleShowController extends Controller
     public function __invoke(Request $request, Article $article)
     {
         $article->load('user');
+
         return Inertia::render('article/Show', compact('article'));
     }
 }

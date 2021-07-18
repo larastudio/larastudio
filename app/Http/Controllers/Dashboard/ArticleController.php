@@ -4,7 +4,7 @@ namespace App\Http\Controllers\Dashboard;
 
 use App\Http\Controllers\Controller;
 use App\Models\Article;
-use Illuminate\Support\Facades\Request;
+use Illuminate\Http\Request;
 use Inertia\Inertia;
 
 class ArticleController extends Controller
@@ -41,10 +41,10 @@ class ArticleController extends Controller
     {
         $request->validate([
             'title' => 'required|string',
-            'body' => 'required|string',
+            'content' => 'required|string',
         ]);
 
-        $request->user()->posts()->create($request->only('title', 'body'));
+        $request->user()->articles()->create($request->only('title', 'content'));
 
         return redirect()->route('articles.index')->with('success', 'Article has been created');
     }
@@ -74,7 +74,7 @@ class ArticleController extends Controller
             'content' => 'required|string',
         ]);
 
-        $article->update($request->only('title', 'body'));
+        $article->update($request->only('title', 'content'));
 
         return back()->with('success', 'Article has been updated');
     }

@@ -17,7 +17,7 @@ class ArticleSeeder extends Seeder
         Article::create([
 
             'title' => 'First Article Title',
-            'body' => 'This is  the body of the text',
+            'content' => 'This is  the body of the text',
         ]);
     }
 }

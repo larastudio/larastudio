@@ -2,7 +2,7 @@
   <app-layout>
     <template #header>
       <h2 class="font-semibold text-xl text-gray-800 leading-tight">
-        Articles
+        Create Articles
       </h2>
     </template>
     <div class="py-12">
@@ -71,7 +71,7 @@ import AppLayout from "@/Layouts/AppLayout";
 import Editor from "@tinymce/tinymce-vue";
 import { useForm } from "@inertiajs/inertia-vue3";
 import JetButton from "@/Jetstream/Button";
-import JetFormSection from "@/Jetstream/FormSection";
+import JetFormSection from "@/Jetstream/FormSectionTiny";
 import JetInput from "@/Jetstream/Input";
 import JetInputError from "@/Jetstream/InputError";
 import JetLabel from "@/Jetstream/Label";

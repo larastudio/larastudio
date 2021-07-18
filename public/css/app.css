@@ -1142,6 +1142,18 @@ select {
 .col-span-6 {
 	grid-column: span 6 / span 6;
 }
+.col-span-12 {
+	grid-column: span 12 / span 12;
+}
+.col-span-full {
+	grid-column: 1 / -1;
+}
+.col-span-1 {
+	grid-column: span 1 / span 1;
+}
+.col-auto {
+	grid-column: auto;
+}
 .m-0 {
 	margin: 0px;
 }
@@ -1345,6 +1357,9 @@ select {
 .max-w-6xl {
 	max-width: 72rem;
 }
+.max-w-full {
+	max-width: 100%;
+}
 .flex-1 {
 	flex: 1 1 0%;
 }
@@ -1398,6 +1413,9 @@ select {
 }
 .grid-cols-1 {
 	grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+.grid-cols-2 {
+	grid-template-columns: repeat(2, minmax(0, 1fr));
 }
 .flex-col {
 	flex-direction: column;
@@ -2099,6 +2117,22 @@ select {
 		grid-column: span 4 / span 4;
 	}
 
+	.sm\:col-span-10 {
+		grid-column: span 10 / span 10;
+	}
+
+	.sm\:col-span-full {
+		grid-column: 1 / -1;
+	}
+
+	.sm\:col-span-1 {
+		grid-column: span 1 / span 1;
+	}
+
+	.sm\:col-auto {
+		grid-column: auto;
+	}
+
 	.sm\:mx-0 {
 		margin-left: 0px;
 		margin-right: 0px;
@@ -2314,6 +2348,10 @@ select {
 
 	.md\:grid-cols-2 {
 		grid-template-columns: repeat(2, minmax(0, 1fr));
+	}
+
+	.md\:grid-cols-1 {
+		grid-template-columns: repeat(1, minmax(0, 1fr));
 	}
 
 	.md\:gap-6 {

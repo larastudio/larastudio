@@ -1,14 +1,14 @@
 <template>
-  <Layout>
+  <AppLayout>
     <Head title="Welcome" />
     <h1>Welcome</h1>
     <p>Hello {{ article.title }} welcome to your first Inertia app!</p>
-  </Layout>
+  </AppLayout>
 </template>
 
 <script>
 import AppLayout from '@/Layouts/AppLayout'
-import { Head } from '@inertiajs/inertia-vue3'
+import { Head } from '@inertiajs/vue3';
 
 export default {
   components: {

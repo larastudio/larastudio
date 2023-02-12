@@ -33,7 +33,6 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 
     Route::resource('articles', ArticleController::class)->except('show');
     // Route::get('/articles/{article}', ArticleShowController::class)->name('articles.show');
-
 });
 
 // Route::prefix('/admin')->middleware(['auth:sanctum', 'verified'])->get('articles/index', function () {

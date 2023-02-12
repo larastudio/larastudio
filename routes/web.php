@@ -42,4 +42,4 @@ Route::middleware(['auth:sanctum', 'verified'])->group(function () {
 //     return Inertia::render('Article/Create');
 // })->name('create-articles');
 
-// Route::get('/articles/{article}', ArticleShowController::class)->name('articles.show');
+Route::get('/articles/{article}', ArticleShowController::class)->name('articles.show');

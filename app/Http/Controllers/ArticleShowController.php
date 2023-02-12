@@ -18,6 +18,6 @@ class ArticleShowController extends Controller
     {
         $article->load('user');
 
-        return Inertia::render('article/Show', compact('article'));
+        return Inertia::render('Article/Show', compact('article'));
     }
 }
